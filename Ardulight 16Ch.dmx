@@ -1,0 +1,43 @@
+Ch1 / Red 1
+D,0,255,
+Ch3 / Green 1
+D,0,255,
+Ch3 / Blue 1
+D,0,255
+Ch4 / Red 2
+D,0,255,
+Ch5 / Green 2
+D,0,255,
+Ch6 / Blue 2
+D,0,255
+Prim. Red
+D,0,255,
+Prim. Green
+D,0,255,
+Prim. Blue
+D,0,255
+Sec. Red
+D,0,255,
+Sec. Green
+D,0,255,
+Sec. Blue
+D,0,255
+Effect
+S,0,10,Off
+S,11,20,Normal
+S,21,255,RisingStar
+Tempo
+V,0,255, BPM
+Beat Type
+S,0,25,quarter note
+S,26,36,quarter dotted
+S,37,72,whole note
+S,73,89,half note
+S,90,99,half dotted
+S,100,136,quarter triplets
+S,137,163,eighth triplets
+S,164,189,eighth
+S,190,200,eighth dotted
+S,201,255,sixteenth
+Intensity
+V,0,255, int
