@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ardulight</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="ardulight">Ardulight</h1>
+<ul>
+<li><a href="#ardulight">Ardulight</a>
+<ul>
+<li><a href="#what-is-it-good-for">What is it good for?</a></li>
+<li><a href="#inputsoutputs">Inputs/Outputs</a></li>
+<li><a href="#modes">Modes</a>
+<ul>
+<li><a href="#digital-effects">Digital effects</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="what-is-it-good-for">What is it good for?</h2>
+<p>You can control up to 6 analogue LED stripes and 1 digital LED stripe (like WS2811) via DMX. You can dim the analogue channels individually and acces multiple effects for the digital one.</p>
+<h2 id="inputsoutputs">Inputs/Outputs</h2>
+<ul>
+<li>DMX In (3 pin XLR male)</li>
+<li>DMX Out (3 pin XLR female)</li>
+<li>Power in 12 V DC up to 95W</li>
+<li>6 analogue out 12V PWM dimmable</li>
+<li>digital out + constant 12 V</li>
+</ul>
+<h2 id="modes">Modes</h2>
+<p>You can use it in DMX mode or static function mode.
+Use the leftmost dip switch to choose between the modes:</p>
+<ul>
+<li>ON:  static function mode</li>
+<li>OFF: DMX-mode.</li>
+</ul>
+<p>There are currently two DMX modes (6 ch an 16 ch).
+The 6-channel-mode is meant to be used, when you only need the analogue channels.</p>
+<table>
+<thead>
+<tr>
+<th>channel</th>
+<th>value</th>
+<th>function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0-255</td>
+<td>Dim analogue 1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0-255</td>
+<td>Dim analogue 2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0-255</td>
+<td>Dim analogue 3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0-255</td>
+<td>Dim analogue 4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0-255</td>
+<td>Dim analogue 5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0-255</td>
+<td>Dim analogue 6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0-255</td>
+<td>digital primary red</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0-255</td>
+<td>digital primary green</td>
+</tr>
+<tr>
+<td>9</td>
+<td>0-255</td>
+<td>digital primary blue</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0-255</td>
+<td>digital secondary red</td>
+</tr>
+<tr>
+<td>11</td>
+<td>0-255</td>
+<td>digital secondary green</td>
+</tr>
+<tr>
+<td>12</td>
+<td>0-255</td>
+<td>digital secondary blue</td>
+</tr>
+<tr>
+<td>13</td>
+<td></td>
+<td><strong>EFFECTS</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>0-10</td>
+<td>OFF</td>
+</tr>
+<tr>
+<td></td>
+<td>11-20</td>
+<td>analogue style</td>
+</tr>
+<tr>
+<td></td>
+<td>21-255</td>
+<td>Rising star</td>
+</tr>
+<tr>
+<td>14</td>
+<td>0-255</td>
+<td>Effect Speed (bpm)</td>
+</tr>
+<tr>
+<td>15</td>
+<td></td>
+<td><strong>BEAT TYPE</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>0-25</td>
+<td>quarter note</td>
+</tr>
+<tr>
+<td></td>
+<td>26-36</td>
+<td>quarter dotted</td>
+</tr>
+<tr>
+<td></td>
+<td>37-72</td>
+<td>whole note</td>
+</tr>
+<tr>
+<td></td>
+<td>73-89</td>
+<td>half note</td>
+</tr>
+<tr>
+<td></td>
+<td>90-99</td>
+<td>half dotted</td>
+</tr>
+<tr>
+<td></td>
+<td>100-136</td>
+<td>quarter triplets</td>
+</tr>
+<tr>
+<td></td>
+<td>137-163</td>
+<td>eighth triplets</td>
+</tr>
+<tr>
+<td></td>
+<td>164-189</td>
+<td>eighth</td>
+</tr>
+<tr>
+<td></td>
+<td>190-200</td>
+<td>eighth dotted</td>
+</tr>
+<tr>
+<td></td>
+<td>201-255</td>
+<td>sixteenth</td>
+</tr>
+<tr>
+<td>16</td>
+<td>0-255</td>
+<td>effect intensity</td>
+</tr>
+</tbody>
+</table>
+<h3 id="digital-effects">Digital effects</h3>
+<table>
+<thead>
+<tr>
+<th>DMX value</th>
+<th>Effect</th>
+<th>Explanation</th>
+<th>Intensity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-10</td>
+<td>OFF</td>
+<td>All lights are turned off -</td>
+<td>-</td>
+</tr>
+<tr>
+<td>11-20</td>
+<td>Analogue Style</td>
+<td>The strips acts like an analogue strip. Use the primary colors (ch.7 -ch.9) to mix the color and brightness</td>
+<td>-</td>
+</tr>
+<tr>
+<td>21-255</td>
+<td>Rising star</td>
+<td>A star with primary color shoots from start to end. Has a trail of secondary color behind it. Variable speed</td>
+<td>length of trail</td>
+</tr>
+</tbody>
+</table>
+
+    </body>
+    </html>
